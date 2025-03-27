@@ -40,10 +40,9 @@ stdenv.mkDerivation rec {
   unpackPhase = ''
     dpkg -x $src unpacked
     cp -r unpacked/* $out/
-    mv $out/bin/NeoHtop $out/bin/neohtop
   '';
 
   fixupPhase = ''
-    wrapProgram $out/bin/neohtop --prefix LD_LIBRARY_PATH : ${libraryPath}
+    wrapProgram $out/bin/NeoHtop --prefix LD_LIBRARY_PATH : ${libraryPath}
   '';
 }
