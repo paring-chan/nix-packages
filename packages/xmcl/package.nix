@@ -7,10 +7,10 @@
 }:
 let
   pname = "xmcl";
-  version = "0.50.5";
+  version = "0.51.1";
   src = fetchurl {
     url = "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v${version}/xmcl-${version}-x64.tar.xz";
-    hash = "sha256-U4R4+fWaJKzdQd222GEsXap8KYW04GcJ6ntn64edwns=";
+    hash = "sha256-V03PnL8yABFkSQF4fHEL+HBePh37TDnQIJlNVi0VZPY=";
   };
   desktopEntry = makeDesktopItem {
     name = "xmcl";
