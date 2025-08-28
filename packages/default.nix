@@ -3,4 +3,5 @@
   (import ./neohtop args)
   (import ./rquickshare args)
   (import ./xmcl args)
+  (import ./arnis args)
 ]
