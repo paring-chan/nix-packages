@@ -1,7 +1,7 @@
 {
   stdenv,
   fetchurl,
-  electron_35,
+  electron,
   bash,
   makeDesktopItem,
 }:
@@ -22,7 +22,7 @@ in
 stdenv.mkDerivation {
   inherit src pname version;
   buildInputs = [
-    electron_35
+    electron
   ];
 
   installPhase = ''
@@ -31,7 +31,7 @@ stdenv.mkDerivation {
     cp resources/app.asar $out/etc/xmcl/app.asar
     mkdir -p $out/bin
     echo '#!${bash}/bin/bash' > $out/bin/xmcl
-    echo "${electron_35}/bin/electron $out/etc/xmcl/app.asar \$@" >> $out/bin/xmcl
+    echo "${electron}/bin/electron $out/etc/xmcl/app.asar \$@" >> $out/bin/xmcl
     cp ${desktopEntry}/share/applications/${pname}.desktop $out/share/applications/${pname}.desktop
     chmod +x $out/bin/xmcl
   '';
