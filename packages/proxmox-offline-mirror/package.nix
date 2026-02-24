@@ -26,8 +26,8 @@ stdenv.mkDerivation {
   unpackPhase = "dpkg-deb -x $src .";
 
   installPhase = ''
-    mkdir $out
-    cp -r . $out
+    mkdir -p $out/bin
+    cp usr/bin/proxmox-offline-mirror $out/bin
   '';
 
   buildInputs = [
