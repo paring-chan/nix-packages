@@ -4,4 +4,5 @@
   (import ./rquickshare args)
   (import ./xmcl args)
   (import ./arnis args)
+  (import ./proxmox-offline-mirror args)
 ]
